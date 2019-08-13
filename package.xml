@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>All_in_One_Shipping</name>
+    <version>1.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>All in One Shipping Extension helps you to make different shipping method calculation and configuration easily.</summary>
+    <description>All in One Shipping Extension helps you to make different shipping method calculation and configuration easily.</description>
+    <notes>All in One Shipping Extension is stabled version. </notes>
+    <authors><author><name>Synotive Technologies</name><user>Synotive</user><email>magento@synotive.com</email></author></authors>
+    <date>2015-01-27</date>
+    <time>09:55:22</time>
+    <contents><target name="magecommunity"><dir name="Synotive"><dir name="Table"><dir name="Block"><dir name="Adminhtml"><dir name="Method"><dir name="Edit"><file name="Form.php" hash="6c36e8b3abafa067741c864bfd6c8aab"/><dir name="Tab"><file name="General.php" hash="52db3ea2595b528aec71a28d0506e60b"/><file name="Import.php" hash="a398344950ba80d759730f5f640c2a61"/><file name="Stores.php" hash="08742aabadb2891cf0abbcf22ea645c9"/></dir><file name="Tabs.php" hash="8d351496bdbf68662c0b721bcb6d5550"/></dir><file name="Edit.php" hash="5543d3cd6f321e1dfde42a6d7028bfb5"/><file name="Grid.php" hash="739082d10a861015b830f155656b2f1a"/></dir><file name="Method.php" hash="e5451b0de16b6d6055a90196820e3b62"/><dir name="Rate"><dir name="Edit"><file name="Form.php" hash="1a2746be8fe4a9cfced1bdb2334d157a"/></dir><file name="Edit.php" hash="33cee06bf557e44fd39d04a2a5d24021"/></dir><file name="Rates.php" hash="b69f78ef77eb616cbce984c41a829860"/></dir></dir><dir name="Helper"><file name="Data.php" hash="27611f87f4dda22db1e5b6c8af4ba428"/></dir><dir name="Model"><dir name="Carrier"><file name="Table.php" hash="d3b340f2a867a0486972c24d5dc8779c"/></dir><dir name="Config"><dir name="Source"><file name="Option.php" hash="4a949551be55afee833353eb02dfdabe"/><file name="Ziptype.php" hash="9f5be1e8c2b6856abf2a64930dfd452f"/></dir></dir><file name="Method.php" hash="05ca7e6a1c9e41d0fb97b7db07b17f7f"/><dir name="Mysql4"><dir name="Method"><file name="Collection.php" hash="a46243dbf73a28b0d24d95e4255dc45f"/></dir><file name="Method.php" hash="a022cb893a91e01f5a835bff88ef6f13"/><dir name="Rate"><file name="Collection.php" hash="9e41d962197c50c0137c0ee13a3a542f"/></dir><file name="Rate.php" hash="5178e939efef974105b4136da812d650"/><file name="Setup.php" hash="13406fe5c7f9ec267815a95d6d012e67"/></dir><file name="Observer.php" hash="aab7cb6f4c2013425d63010972e0d35d"/><file name="Rate.php" hash="58cdb6a05fbf964156ce35b6eb687056"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="MethodController.php" hash="f1e5b89fce1ea8dac3da27244697b1ab"/><file name="RateController.php" hash="0f279fa1adc9a269af2d61b239a05259"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="9f8eaaef726e66f36d0166495fd071e5"/><file name="config.xml" hash="26ae4885184c1ae76b95c24fc4f7378c"/><file name="system.xml" hash="13da9bfbc2ceec40bd4c10a5e52932c9"/></dir><dir name="sql"><dir name="synotivetable_setup"><file name="mysql4-install-1.php" hash="0161673a3ec6162c9dd93660bc0e069c"/><file name="mysql4-upgrade-1-1.1.php" hash="0638516e63fe6ec9011029fcb681b49c"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Synotive_Table.xml" hash="f6bf958a995cbfea601d45a8bcb8e7de"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>5.5.0</max></php></required></dependencies>
+</package>
