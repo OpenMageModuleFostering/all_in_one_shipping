@@ -1,0 +1,57 @@
+<?xml version="1.0"?> 
+
+<config>
+       <menu>
+            <sales>
+                <children>
+                    <synotiveallinoneshipping translate="title" module="synotiveallinoneshipping">
+                        <title>All in One Shipping</title>
+                        <sort_order>850</sort_order>
+                        <action>synotiveallinoneshipping/adminhtml_method</action>
+                    </synotiveallinoneshipping>
+                </children>
+            </sales>
+        </menu>      
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+                <admin>
+                    <children>
+                        <sales>
+                            <children>
+                                <synotiveallinoneshipping>
+                                    <title>All in One Shipping</title>
+                                </synotiveallinoneshipping>
+                            </children>
+                        </sales>
+			             <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <carriers>
+                                            <children>
+                                                <synotiveallinoneshipping>
+                                                    <title>All in One Shipping</title>
+                                                </synotiveallinoneshipping>
+                                            </children>
+                                        </carriers>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                     </children>
+                </admin> 
+			</resources>
+		</acl>
+        <translate>
+            <modules>
+                <Synotive_Allinoneshipping>
+                    <files>
+                        <default>Synotive_Allinoneshipping.csv</default>
+                    </files>
+                </Synotive_Allinoneshipping>
+            </modules>
+        </translate> 	
+</config> 

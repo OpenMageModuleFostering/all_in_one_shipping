@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Synotive_Allinoneshipping>
+            <version>1.1.1</version>
+        </Synotive_Allinoneshipping>
+    </modules>
+    
+    <admin>
+        <routers>
+			<synotiveallinoneshipping>
+				<use>admin</use>
+				<args>
+					<module>Synotive_Allinoneshipping</module>
+					<frontName>synotiveallinoneshipping</frontName>
+				</args>
+			</synotiveallinoneshipping>
+        </routers>
+    </admin> 
+    
+    <global>
+        <models>
+            <synotiveallinoneshipping>
+                <class>Synotive_Allinoneshipping_Model</class>
+                <resourceModel>synotiveallinoneshipping_mysql4</resourceModel>
+            </synotiveallinoneshipping>
+            <synotiveallinoneshipping_mysql4>
+                <class>Synotive_Allinoneshipping_Model_Mysql4</class>
+                <entities>
+                    <method>
+                        <table>synotive_allinoneshipping_method</table>
+                    </method> 
+                    <rate>
+                        <table>synotive_allinoneshipping_rate</table>
+                    </rate>  
+                </entities>
+            </synotiveallinoneshipping_mysql4>   
+        </models>      
+                     
+        <resources>
+            <synotiveallinoneshipping_setup>
+                <setup>
+                    <module>Synotive_Allinoneshipping</module>
+                    <class>Synotive_Allinoneshipping_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </synotiveallinoneshipping_setup>
+            
+            <synotiveallinoneshipping_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </synotiveallinoneshipping_write>
+            
+            <synotiveallinoneshipping_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </synotiveallinoneshipping_read>
+        </resources>
+
+        <blocks>
+            <synotiveallinoneshipping>
+                <class>Synotive_Allinoneshipping_Block</class>
+            </synotiveallinoneshipping>
+        </blocks>
+        
+        <helpers>
+            <synotiveallinoneshipping>
+                <class>Synotive_Allinoneshipping_Helper</class>
+            </synotiveallinoneshipping>
+        </helpers>
+        
+        <events> 
+            <sales_quote_config_get_product_attributes>
+                <observers>
+                    <synotiveallinoneshipping>
+                        <class>synotiveallinoneshipping/observer</class>
+                        <method>addProductAttributes</method>
+                    </synotiveallinoneshipping>
+                </observers>
+            </sales_quote_config_get_product_attributes>                         
+         </events>              
+    </global>
+    
+    <adminhtml>
+        <menu>
+            <sales>
+                <children>
+                    <synotiveallinoneshipping translate="title" module="synotiveallinoneshipping">
+                        <title>All in One Shipping</title>
+                        <sort_order>850</sort_order>
+                        <action>synotiveallinoneshipping/adminhtml_method</action>
+                    </synotiveallinoneshipping>
+                </children>
+            </sales>
+        </menu>      
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+                <admin>
+                    <children>
+                        <sales>
+                            <children>
+                                <synotiveallinoneshipping>
+                                    <title>All in One Shipping</title>
+                                </synotiveallinoneshipping>
+                            </children>
+                        </sales>
+			            <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <carriers>
+                                            <children>
+                                                <synotiveallinoneshipping>
+                                                    <title>All in One Shipping</title>
+                                                </synotiveallinoneshipping>
+                                            </children>
+                                        </carriers>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                     </children>
+                </admin> 
+			</resources>
+		</acl>
+        <translate>
+            <modules>
+                <Synotive_Allinoneshipping>
+                    <files>
+                        <default>Synotive_Allinoneshipping.csv</default>
+                    </files>
+                </Synotive_Allinoneshipping>
+            </modules>
+        </translate> 		
+    </adminhtml>
+
+    <default>
+            <carriers>
+                <synotiveallinoneshipping>
+                    <active>0</active>
+                    <title>All in One Shipping</title>
+                    <sort_order>100</sort_order>
+                    <sallowspecific>0</sallowspecific>
+                    <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                    <model>synotiveallinoneshipping/carrier_allinoneshipping</model>
+                    <allow_promo>1</allow_promo>
+                    <numeric_zip>1</numeric_zip>
+                    <ignore_virtual>1</ignore_virtual>
+                    <after_discount>0</after_discount>
+                    <including_tax>0</including_tax>
+                    <dont_split>0</dont_split>
+                    <showmethod>0</showmethod>                
+                </synotiveallinoneshipping>
+            </carriers>
+    </default> 
+</config>
