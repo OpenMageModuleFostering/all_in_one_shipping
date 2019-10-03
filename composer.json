@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/All_in_One_Shipping",
+    "name": "OpenMageModuleFostering\/All_in_One_Shipping",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "All in One Shipping Extension helps you to make different shipping method calculation and configuration easily.",
     "authors": [
-    {
-        "name": "Synotive Technologies",
-        "email": "magento@synotive.com"
-    }
-],
+        {
+            "name": "Synotive Technologies",
+            "email": "magento@synotive.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
