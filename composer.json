@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/All_in_One_Shipping",
+    "name": "openmage-module-fostering\/all_in_one_shipping",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "All in One Shipping Extension helps you to make different shipping method calculation and configuration easily.",
     "authors": [
